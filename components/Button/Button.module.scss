@@ -1,0 +1,40 @@
+@import "../../styles/framework/variables";
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: $white;
+  padding: 8px 12px;
+  border: 2px solid $white;
+  border-radius: 24px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.22);
+  }
+  &:active {
+    box-shadow: none;
+  }
+
+  &.primary {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+    &:hover {
+      background-color: $dark-blue;
+      border-color: $dark-blue;
+    }
+  }
+
+  &.primaryoutline {
+    border-color: $blue !important;
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+}

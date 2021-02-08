@@ -1,0 +1,38 @@
+// Normalize/Reset our styles
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+// Only thing we'll need to do to the .App is add padding to offset sticky navbar.
+// .App wraps around the main content of the page
+.main {
+  padding-top: 80px;
+  overflow-y: hidden;
+}
+
+// Imports
+// @example: importing in another directory
+// @import "src/scss/variables";
+
+// flex/containers
+@import "./flexboxgrid";
+
+// Main text styles
+@import "./texts";
+
+// header
+@import "./header";
+
+// footer

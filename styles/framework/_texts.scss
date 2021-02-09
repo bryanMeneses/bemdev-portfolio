@@ -58,6 +58,12 @@ h6 {
   font-size: 14px;
 }
 
+@media screen and (min-width: $mq-sm) {
+  h1 {
+    font-size: 44px;
+  }
+}
+
 @media screen and (min-width: $mq-md) {
   h1 {
     font-size: 48px;

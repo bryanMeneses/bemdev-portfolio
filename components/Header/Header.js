@@ -42,22 +42,27 @@ const Header = () => {
   );
   
   return (
-    <header className="header">
-      <div className={`navbar mobile-nav-${mobileNavActive}`}>
+    <header className="text-white fixed w-full bg-green-500">
+      <div className={`flex relative w-full justify-between items-center h-20 px-8 mobile-nav-${mobileNavActive}`}>
         <Link passHref href="/">
-          <a className="brand">BeMDeV</a>
+          <a className="text-5xl font-bold">BeMDeV</a>
         </Link>
-        <div ref={allLinksRef} className="nav-links-desktop">
+        <div ref={allLinksRef} className="hidden md:block">
           {navLinks.map((link, i) => {
             return (
-              <Link key={i} className="link" href={link.path}>{link.text}</Link>
+              <Link 
+                key={i} 
+                passHref
+                href={link.path}>
+                <a className="tracking-wide font-bold py-3 px-4 mr-5 rounded-lg hover:bg-green-700 transition-colors duration-300">{link.text}</a>
+              </Link>
             );
           })}
         </div>
 
         <div 
           onClick={() => {setMobileNav(!mobileNavActive)}} 
-          className="hamburger-box"
+          className="hidden hamburger-box"
           aria-label="Click on this element to activate mobile navigation menu."
           role="navigation"
         >

@@ -1,1 +1,12 @@
-@import "./framework/main";
+// @import "./framework/main";
+
+.main {
+  padding-top: 80px;
+  overflow-y: hidden;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px !important;
+  }
+}

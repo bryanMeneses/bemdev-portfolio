@@ -1,11 +1,17 @@
-// @import "./framework/main";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .main {
   padding-top: 80px;
   overflow-y: hidden;
 }
 
-@media (min-width: 1280px) {
+.container {
+  @apply mx-auto;
+}
+
+@screen xl {
   .container {
     max-width: 1200px !important;
   }

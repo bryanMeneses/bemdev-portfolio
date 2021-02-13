@@ -42,7 +42,7 @@ const Header = () => {
   );
   
   return (
-    <header className="text-white fixed w-full bg-green-500">
+    <header className="text-white fixed w-full bg-my-green-200">
       <div className={`flex relative w-full justify-between items-center h-20 px-8 mobile-nav-${mobileNavActive}`}>
         <Link passHref href="/">
           <a className="text-5xl font-bold">BeMDeV</a>
@@ -54,7 +54,7 @@ const Header = () => {
                 key={i} 
                 passHref
                 href={link.path}>
-                <a className="tracking-wide font-bold py-3 px-4 mr-5 rounded-lg hover:bg-green-700 transition-colors duration-300">{link.text}</a>
+                <a className="tracking-wide font-bold py-3 px-4 mr-5 rounded-lg hover:bg-green-600 transition-colors duration-300">{link.text}</a>
               </Link>
             );
           })}

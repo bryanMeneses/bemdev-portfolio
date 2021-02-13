@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import styles from './Button.module.scss'
+import styles from './Button.module.css'
 
 import { btnStyles } from './btnStyles'
 

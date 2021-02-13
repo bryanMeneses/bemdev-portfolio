@@ -1,6 +1,3 @@
-@import "./framework/variables";
-@import "./framework/breakpoints";
-
 .wrapper {
   min-height: 640px;
   display: flex;
@@ -19,57 +16,31 @@
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-  .img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
-
-.text {
-  margin-top: 24px;
-  h5 {
-    color: $gray;
-  }
-  h1 {
-    margin: 8px 0;
-  }
-  h5,
-  h4,
-  h1 {
-    text-align: center;
-  }
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cta {
   text-align: center;
 }
 
-@media screen and (min-width: $mq-sm) {
+@screen sm {
   .wrapper {
     min-height: 800px;
   }
 }
 
-@media screen and (min-width: $mq-md) {
+@screen md {
   .wrapper {
     min-height: 700px;
   }
-  .row {
-    justify-content: space-around;
-  }
 
-  .text {
-    margin-top: 0;
-    h5,
-    h4,
-    h1 {
-      text-align: left;
-    }
-  }
   .cta {
     text-align: left;
   }

@@ -2,6 +2,7 @@
   min-height: 640px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .img-wrap {

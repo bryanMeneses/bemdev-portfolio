@@ -5,6 +5,7 @@
 .main {
   padding-top: 80px;
   overflow-y: hidden;
+  background: linear-gradient(90deg, #0ba5d3 0%, #20e1ae 100%);
 }
 
 .container {

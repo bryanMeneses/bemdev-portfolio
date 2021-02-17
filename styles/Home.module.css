@@ -1,5 +1,5 @@
-.wrapper {
-  min-height: 640px;
+.hero {
+  min-height: 720px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

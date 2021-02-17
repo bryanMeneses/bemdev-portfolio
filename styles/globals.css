@@ -2,18 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: linear-gradient(90deg, #0ba5d3 0%, #20e1ae 100%);
+}
+
+.gradient {
+  background: linear-gradient(90deg, #0ba5d3 0%, #20e1ae 100%);
+}
+
 .main {
   padding-top: 80px;
   overflow-y: hidden;
-  background: linear-gradient(90deg, #0ba5d3 0%, #20e1ae 100%);
 }
 
 .container {
   @apply mx-auto;
-}
-
-@screen xl {
-  .container {
-    max-width: 1200px !important;
-  }
 }

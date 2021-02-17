@@ -2,7 +2,6 @@
   display: inline-block;
   cursor: pointer;
   font-weight: 700;
-  background-color: #ffffff;
   padding: 8px 12px;
   border: 2px solid #ffffff;
   border-radius: 24px;
@@ -24,6 +23,10 @@
   @apply bg-my-teal-100 border-my-teal-100 text-white hover:bg-my-teal-200 hover:border-my-teal-200;
 }
 
-.btn.primaryoutline {
-  @apply border-my-teal-100 hover:bg-white text-my-teal-100;
+.btn.secondary {
+  @apply bg-white border-white text-my-teal-200 hover:bg-gray-200 hover:border-gray-200;
+}
+
+.btn.primary-outline {
+  @apply border-my-teal-100 text-white hover:bg-white;
 }

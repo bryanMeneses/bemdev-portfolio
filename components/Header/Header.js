@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
 import { navLinks } from '../../utils/nav-links';
 
-import PropTypes from 'prop-types';
-
 const Header = () => {
 
   let [mobileNavActive, setMobileNav] = useState(false);
@@ -12,10 +10,6 @@ const Header = () => {
   const initialRender = useRef(true);
   const linksRef = useRef();
 
-
-  const closeMenu = () => {
-    setMobileNav(false);
-  }
 
   useEffect(
     () => {
@@ -42,10 +36,10 @@ const Header = () => {
   );
   
   return (
-    <nav className="text-white fixed w-full shadow-md">
+    <nav className="fixed w-full shadow-md">
       <div className={`flex relative w-full justify-between items-center h-20 px-8 mobile-nav-${mobileNavActive}`}>
         <Link passHref href="/">
-          <a className="text-5xl font-bold">BeMDeV</a>
+          <a className="text-5xl text-gray-800 font-bold">BeMDeV</a>
         </Link>
         <div ref={allLinksRef} className="hidden md:block">
           {navLinks.map((link, i) => {
@@ -74,14 +68,5 @@ const Header = () => {
     </nav>
   );
 }
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 
 export default Header;

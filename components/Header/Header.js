@@ -5,11 +5,19 @@ import { navLinks } from '../../utils/nav-links';
 const Header = () => {
 
   let [mobileNavActive, setMobileNav] = useState(false);
+  let [scrolled, setScrolled] = useState(false)
 
   const allLinksRef = useRef();
   const initialRender = useRef(true);
   const linksRef = useRef();
 
+  const handleScroll = () => {
+    if (window.scrollY > 80) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
 
   useEffect(
     () => {
@@ -34,9 +42,15 @@ const Header = () => {
     }, 
     [mobileNavActive]
   );
+
+  useEffect(() => {
+
+    window.addEventListener('scroll', handleScroll)
+    return 
+  })
   
   return (
-    <nav className="fixed w-full shadow-md">
+    <nav className={`z-10 fixed w-full shadow-md transition-all ${scrolled && 'bg-white'}`}>
       <div className={`flex relative w-full justify-between items-center h-20 px-8 mobile-nav-${mobileNavActive}`}>
         <Link passHref href="/">
           <a className="text-5xl text-gray-800 font-bold">BeMDeV</a>

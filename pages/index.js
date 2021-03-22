@@ -8,21 +8,12 @@ import Trail from '@/components/Trail'
 import Item from '@/components/Experience/Item'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubAlt, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { fadeIn } from 'animations/fadeIn'
 
+import { Element } from "react-scroll";
 
 
 export default function Home() {
-
-  const props = useSpring({
-    opacity: 1, 
-    delay: 1000, 
-    from: {
-      opacity: 0
-    },
-    config: {
-      duration: 550,
-    },
-  })
 
   return (
     <>
@@ -44,7 +35,7 @@ export default function Home() {
               </div>
             </Trail>
 
-            <animated.div style={props} className='w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
+            <animated.div style={useSpring(fadeIn(1000))} className='w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
               <div className={styles['img-wrap']}>
                 <div className={styles.img}>
                   <Image width="640" height="640" layout="responsive" src="/bryan-portrait.jpeg" />
@@ -52,18 +43,18 @@ export default function Home() {
               </div>
             </animated.div>
           </div>
-          <div className="socials">
+          <animated.div style={useSpring(fadeIn(1250))} className="socials mt-4">
             <a className="h-14 w-14 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
               <FontAwesomeIcon className="w-2/4" color="white" icon={faGithubAlt} />
             </a>
             <a className="h-14 w-14 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
               <FontAwesomeIcon className="w-2/4" color="white" icon={faLinkedinIn} />
             </a>
-          </div>
+          </animated.div>
         </div>
       </div>
 
-      <section className="w-full py-12 bg-white">
+      <Element name="experience" className="w-full py-12 bg-white">
         <div className="container max-w-5xl mx-auto">
           <h2 className="my-2 font-bold tracking-wider text-gray-800 text-left leading-tight">Experience</h2>
           <div className="w-full">
@@ -82,7 +73,7 @@ export default function Home() {
             company="Win-Kel"
           />
         </div>
-      </section>
+      </Element>
 
       <section className="w-full py-12 bg-white">
         <div className="container max-w-5xl mx-auto">

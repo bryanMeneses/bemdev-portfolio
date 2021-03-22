@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Link from 'next/link';
+import {Link} from 'react-scroll';
 import { navLinks } from '../../utils/nav-links';
 
 const Header = () => {
@@ -58,11 +58,14 @@ const Header = () => {
         <div ref={allLinksRef} className="hidden md:block">
           {navLinks.map((link, i) => {
             return (
-              <Link 
+              <Link
+                smooth={true}
+                offset={-78}
+                className="cursor-pointer tracking-wide text-gray-800 font-bold py-3 px-4 mr-5 rounded-lg hover:bg-white transition-colors duration-300"
                 key={i} 
-                passHref
-                href={link.path}>
-                <a className="tracking-wide text-gray-800 font-bold py-3 px-4 mr-5 rounded-lg hover:bg-white transition-colors duration-300">{link.text}</a>
+                to={link.path}
+                >
+                {link.text}
               </Link>
             );
           })}

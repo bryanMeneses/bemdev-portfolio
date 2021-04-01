@@ -15,7 +15,7 @@ const Trail = ({children, ...props}) => {
       <div>
         {trail.map(({ y, ...rest }, index) => (
           <a.div
-            key={items[index]}
+            key={index}
             className="trails-text"
             style={{ ...rest, transform: y.interpolate((y) => `translate3d(0,${y}px,0)`) }}
           >

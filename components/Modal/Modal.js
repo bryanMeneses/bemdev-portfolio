@@ -24,7 +24,6 @@ const Modal = ({closeModal, active, content}) => {
                 <footer>
                 </footer>
               </div>
-
             </animated.div>
           </animated.div>
         )

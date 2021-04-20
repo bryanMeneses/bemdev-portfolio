@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ButtonLink } from '../components/Button/button'
+import { ButtonLink, Button } from '../components/Button/button'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 
@@ -56,31 +56,31 @@ export default function Home() {
         active={active} 
         closeModal={closeModal} 
         content={
-        <div 
-          style={{
-            position: 'relative',
-            width: '100%',
-            paddingTop: '60%',
-            overflow: 'hidden',
-          }}
-        >
-          <iframe 
+          <div 
             style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
+              position: 'relative',
               width: '100%',
-              height: '100%',
-            }} 
-            src="https://www.youtube.com/embed/GtgjXW8gfBE" 
-            frameBorder="0" 
-            width="560" 
-            height="315" 
-            allowFullScreen={true} 
-            mozallowfullscreen="true" 
-            webkitallowfullscreen="true">
-          </iframe>
-        </div>
+              paddingTop: '60%',
+              overflow: 'hidden',
+            }}
+          >
+            <iframe 
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+              }} 
+              src="https://www.youtube.com/embed/GtgjXW8gfBE" 
+              frameBorder="0" 
+              width="560" 
+              height="315" 
+              allowFullScreen={true} 
+              mozallowfullscreen="true" 
+              webkitallowfullscreen="true">
+            </iframe>
+          </div>
         } 
       />
 
@@ -101,10 +101,10 @@ export default function Home() {
                 </a>
               </div>
             </Trail>
-
+           {/* 
             <animated.div style={useSpring(fadeIn(1000))} className='relative w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
               <img style={{transform: "translateY(-50%)"}} className="absolute top-2/4 left-10 max-w-lg" src="/app.png" />
-            </animated.div>
+            </animated.div> */}
           </div>
           <animated.div style={useSpring(fadeIn(1250))} className={`mt-8 ${styles.cta}`}>
             <ButtonLink href="/" btnStyle="primary" className="mr-4">VIEW PROJECTS</ButtonLink>
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
       </Element>
 
-      <Element className="w-full py-12 bg-white">
+      <Element name="education" className="w-full py-12 bg-white">
         <div className="container">
           <h2 className="my-2 font-bold tracking-wider text-gray-800 text-left leading-tight">Education</h2>
           <div className="w-full">
@@ -156,24 +156,73 @@ export default function Home() {
           <Item
             title="California State University, Fullerton"
             company="Bachelor of Arts"
-            description={<><p>Business Administration - Accounting Track</p></>}
+            description={<p>Business Administration - Accounting Track</p>}
             date="Graduated in January 2019"
           />
         </div>
       </Element>
 
-      <Element className="w-full py-12 bg-white">
+      {/* <Element className="w-full py-12 bg-white">
         <div className="container">
           <h2 className="my-2 font-bold tracking-wider text-gray-800 text-left leading-tight">Projects</h2>
           <div className="w-full">
             <div className="h-1 w-52 ml-12 opacity-40 gradient"></div>
           </div>
         </div>
-      </Element>
+      </Element> */}
 
-      <Element className="py-12">
+      <Element name="about" className="py-12">
         <div className="container">
           <h2 className="my-2 text-white font-bold tracking-wider text-left leading-tight">About Me</h2>
+          <div className="w-full">
+            <div className="h-1 w-52 ml-12 opacity-40 bg-white"></div>
+          </div>
+          <div className='flex mt-10 flex-col items-center justify-between md:flex-row'>
+
+            <div className="w-6/12 text-white text-xl">
+              <p>
+                Hi! My name is Bryan Meneses and I am a web developer based in the Southwest of England, originally from the USA. My journey to web development was long. I used to study music, and then I graduated in Accounting. By then creativity was gone in my life and I felt aimless.
+              </p>
+              <p className="mt-10">
+                Web develoment reignited both the creative and logical sides of my life.
+              </p>
+            </div>
+
+            <div className='w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
+              <div className={styles['img-wrap']}>
+                <div className={styles.img}>
+                  <Image width="640" height="640" layout="responsive" src="/bryan-portrait.jpeg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Element>
+
+      <Element name="contact" className="w-full py-12 bg-white">
+        <div className="container">
+          <h2 className="my-2 font-bold tracking-wider text-gray-800 leading-tight text-center">Contact Me</h2>
+          <div className="w-full">
+            <div className="h-1 w-52 mx-auto opacity-40 gradient"></div>
+          </div>
+          <h6 className="my-4 text-center">If you are a fan of what I do, let's get in touch.</h6>
+          <form name="contactMe" method="POST" data-netlify="true" className="max-w-3xl mx-auto">
+            <div className="form-control mb-4">
+              <label htmlFor="name">Name:</label>
+              <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="text" id="name" required />
+            </div>
+            <div className="form-control mb-4">
+              <label htmlFor="email">Email:</label>
+              <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="email" id="email" required />
+            </div>
+            <div className="form-control mb-4">
+              <label htmlFor="email">Message:</label>
+              <textarea className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-32" id="email" required></textarea>
+            </div>
+            <div className="cta mt-8">
+              <Button type="submit" btnStyle="primary" className="w-32 text-center">SEND</Button>
+            </div>
+          </form>
         </div>
       </Element>
     </>

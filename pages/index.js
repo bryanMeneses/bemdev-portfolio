@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ButtonLink, Button } from '../components/Button/button'
+import { ButtonLink, Button } from '../components/Button/Button'
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
 

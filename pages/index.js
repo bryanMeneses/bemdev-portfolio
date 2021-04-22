@@ -92,10 +92,10 @@ export default function Home() {
             <h2 className="leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl">Your Next Front End Developer</h2>
             <h5 className="leading-normal mb-8 font-normal max-w-xl">I love to build experiences on the Web. My strength is building front-end web applications that match your designs to the dot.</h5>
             <div className='mt-4'>
-              <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
+              <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="https://github.com/bryanMeneses" target="blank">
                 <FontAwesomeIcon className="w-2/4" color="white" icon={faGithubAlt} />
               </a>
-              <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
+              <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="https://www.linkedin.com/in/bryan-meneses/" target="blank">
                 <FontAwesomeIcon className="w-2/4" color="white" icon={faLinkedinIn} />
               </a>
             </div>
@@ -200,7 +200,7 @@ export default function Home() {
             <div className="h-1 w-52 mx-auto opacity-40 gradient"></div>
           </div>
           <h6 className="my-4 text-center">If you are a fan of what I do, let's get in touch.</h6>
-          <form name="contactMe" method="POST" data-netlify="true" className="max-w-3xl mx-auto">
+          <form name="contactMe" method="POST" data-netlify="true" className="max-w-3xl mx-auto px-4">
           <input type="hidden" name="form-name" value="contactMe" />
             <div className="form-control mb-4">
               <label htmlFor="name">Name:</label>
@@ -211,8 +211,8 @@ export default function Home() {
               <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="email" name="email" id="email" required />
             </div>
             <div className="form-control mb-4">
-              <label htmlFor="email">Message:</label>
-              <textarea className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-32" id="email" name="message" required></textarea>
+              <label htmlFor="message">Message:</label>
+              <textarea className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-32" id="message" name="message" required></textarea>
             </div>
             <div className="cta mt-8">
               <Button type="submit" btnStyle="primary" className="w-32 text-center">SEND</Button>
@@ -220,6 +220,10 @@ export default function Home() {
           </form>
         </div>
       </Element>
+
+      <div className="text-center py-2">
+        Designed and Created by Bryan Meneses - 2021
+      </div>
     </>
   )
 }

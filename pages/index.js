@@ -86,26 +86,20 @@ export default function Home() {
 
       <Element className={`${styles.hero}`}>
         <div className="container">
-          <div className='flex flex-col items-center justify-between md:flex-row'>
-            <Trail className='mt-4 font-bold text-white md:pr-4 md:mt-0 lg:p-0 md:w-10/12'>
-              <h6 className="uppercase tracking-loose font-normal">React, Next.js, Node.js, Shopify/Liquid</h6>
-              <h1 className="leading-tight my-2 text-7xl">Bryan Meneses</h1>
-              <h2 className="leading-tight mb-4 text-5xl">Your Next Front End Developer</h2>
-              <h5 className="leading-normal mb-8 font-normal max-w-xl">I love to build experiences on the Web. My strength is building front-end web applications that match your designs to the dot.</h5>
-              <div className='mt-4'>
-                <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
-                  <FontAwesomeIcon className="w-2/4" color="white" icon={faGithubAlt} />
-                </a>
-                <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
-                  <FontAwesomeIcon className="w-2/4" color="white" icon={faLinkedinIn} />
-                </a>
-              </div>
-            </Trail>
-           {/* 
-            <animated.div style={useSpring(fadeIn(1000))} className='relative w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
-              <img style={{transform: "translateY(-50%)"}} className="absolute top-2/4 left-10 max-w-lg" src="/app.png" />
-            </animated.div> */}
-          </div>
+          <Trail className='mt-4 font-bold text-white md:pr-4 md:mt-0 lg:p-0'>
+            <p className="uppercase tracking-loose font-normal">React, Next.js, Node.js, Shopify/Liquid</p>
+            <h1 className="leading-tight my-2 text-5xl sm:text-6xl md:text-7xl">Bryan Meneses</h1>
+            <h2 className="leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl">Your Next Front End Developer</h2>
+            <h5 className="leading-normal mb-8 font-normal max-w-xl">I love to build experiences on the Web. My strength is building front-end web applications that match your designs to the dot.</h5>
+            <div className='mt-4'>
+              <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
+                <FontAwesomeIcon className="w-2/4" color="white" icon={faGithubAlt} />
+              </a>
+              <a className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg" href="#">
+                <FontAwesomeIcon className="w-2/4" color="white" icon={faLinkedinIn} />
+              </a>
+            </div>
+          </Trail>
           <animated.div style={useSpring(fadeIn(1250))} className={`mt-8 ${styles.cta}`}>
             <ButtonLink href="/" btnStyle="primary" className="mr-4">VIEW PROJECTS</ButtonLink>
             <ButtonLink href="/" btnStyle="secondary">DOWNLOAD CV</ButtonLink>
@@ -126,7 +120,7 @@ export default function Home() {
               <ul className="list-disc pl-5">
                 <li className="mb-2">Developed a full-stack portal using Next.js and Node.js to simplify work-flow for marketing team. Features creating Trello cards via the Trello API directly from portal and routes for downloading various brand assets. Backend connects to various Mongo databases used in other company sites. Uses roles/middleware to authorize relative people to access specific routes.</li>
                 <li className="mb-2">Maintained and updated <a href="https://skinresearchlabs.com" target="blank">Skin Research Laboratories</a> Shopify front end to fit holidays/seasons and created custom dynamic features, during which period the store's revenue increased by 75% over the year before.</li>
-                <li className="mb-2">Created a scrolling animated product page to market a client's new product line using GSAP.<button onClick={openModal} className="text-blue-600">View example.</button></li>
+                <li className="mb-2">Created a scrolling animated product page to market a client's new product line using GSAP. <button onClick={openModal} className="text-blue-600">View example.</button></li>
                 <li className="mb-2">Drastically improved page initial loading times for above e-commerce site by implementing image and stylesheet lazy-loading.</li>
                 <li className="mb-2">Coordinated with the lead developer using Git and Bitbucket.</li>
               </ul>
@@ -179,7 +173,7 @@ export default function Home() {
           </div>
           <div className='flex mt-10 flex-col items-center justify-between md:flex-row'>
 
-            <div className="w-6/12 text-white text-xl">
+            <div className="w-full md:w-6/12 text-white text-xl">
               <p>
                 Hi! My name is Bryan Meneses and I am a web developer based in the Southwest of England, originally from the USA. My journey to web development was long. I used to study music, and then I graduated in Accounting. By then creativity was gone in my life and I felt aimless.
               </p>
@@ -188,10 +182,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
+            <div style={{minWidth: 300}} className='mt-10 md:mt-0 w-7/12 md:w-5/12 lg:p-0 lg:w-4/12'>
               <div className={styles['img-wrap']}>
                 <div className={styles.img}>
-                  <Image width="640" height="640" layout="responsive" src="/bryan-portrait.jpeg" />
+                  <img width="640" height="640" src="/bryan-portrait.jpeg" />
                 </div>
               </div>
             </div>

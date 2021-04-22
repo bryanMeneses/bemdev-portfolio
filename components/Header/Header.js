@@ -54,7 +54,7 @@ const Header = () => {
     <nav className={`z-10 fixed w-full shadow-md transition-all ${scrolled && 'bg-white'}`}>
       <div className={`flex relative w-full justify-between items-center h-20 px-8 mobile-nav-${mobileNavActive}`}>
         <Link passHref href="/">
-          <a className="text-5xl text-gray-800 font-bold">BeMDeV</a>
+          <a className="text-4xl sm:text-5xl text-gray-800 font-bold">BeMDeV</a>
         </Link>
         <div ref={allLinksRef} className="hidden md:block">
           {navLinks.map((link, i) => {

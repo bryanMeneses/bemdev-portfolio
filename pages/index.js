@@ -204,15 +204,15 @@ export default function Home() {
           <input type="hidden" name="form-name" value="contactMe" />
             <div className="form-control mb-4">
               <label htmlFor="name">Name:</label>
-              <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="text" id="name" required />
+              <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="text" name="name" id="name" required />
             </div>
             <div className="form-control mb-4">
               <label htmlFor="email">Email:</label>
-              <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="email" id="email" required />
+              <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="email" name="email" id="email" required />
             </div>
             <div className="form-control mb-4">
               <label htmlFor="email">Message:</label>
-              <textarea className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-32" id="email" required></textarea>
+              <textarea className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-32" id="email" name="message" required></textarea>
             </div>
             <div className="cta mt-8">
               <Button type="submit" btnStyle="primary" className="w-32 text-center">SEND</Button>

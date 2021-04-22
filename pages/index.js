@@ -201,6 +201,7 @@ export default function Home() {
           </div>
           <h6 className="my-4 text-center">If you are a fan of what I do, let's get in touch.</h6>
           <form name="contactMe" method="POST" data-netlify="true" className="max-w-3xl mx-auto">
+          <input type="hidden" name="form-name" value="contactMe" />
             <div className="form-control mb-4">
               <label htmlFor="name">Name:</label>
               <input className="block w-full rounded-lg px-2 py-2 mt-1 border-2 border-solid border-my-teal-200 h-8" type="text" id="name" required />

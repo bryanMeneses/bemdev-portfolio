@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import { ButtonLink, Button } from '../components/Button/Button'
 import styles from '../styles/Home.module.css'
-import Image from 'next/image'
 
-import {useSpring, animated} from 'react-spring'
-import { fadeIn } from 'animations/fadeIn'
 import Trail from '@/components/Trail'
 import Item from '@/components/Experience/Item'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -87,7 +84,7 @@ export default function Home() {
       <Element className={`${styles.hero}`}>
         <div className="container">
           <Trail className='mt-4 font-bold text-white md:pr-4 md:mt-0 lg:p-0'>
-            <p className="uppercase tracking-loose font-normal">React, Next.js, Node.js, Shopify/Liquid</p>
+            <p className="uppercase tracking-loose font-normal xl:text-xl">React, Next.js, Node.js, Shopify/Liquid</p>
             <h1 className="leading-tight my-2 text-5xl sm:text-6xl md:text-7xl">Bryan Meneses</h1>
             <h2 className="leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl">Your Next Front End Developer</h2>
             <h5 className="leading-normal mb-8 font-normal max-w-xl">I love to build experiences on the Web. My strength is building front-end web applications that match your designs to the dot.</h5>
@@ -99,11 +96,11 @@ export default function Home() {
                 <FontAwesomeIcon className="w-2/4" color="white" icon={faLinkedinIn} />
               </a>
             </div>
+            {/* <div className="mt-8">
+              <ButtonLink href="/" btnStyle="primary" className="mr-4">VIEW PROJECTS</ButtonLink>
+              <ButtonLink href="/" btnStyle="secondary">DOWNLOAD CV</ButtonLink>
+            </div> */}
           </Trail>
-          <animated.div style={useSpring(fadeIn(1250))} className={`mt-8 ${styles.cta}`}>
-            <ButtonLink href="/" btnStyle="primary" className="mr-4">VIEW PROJECTS</ButtonLink>
-            <ButtonLink href="/" btnStyle="secondary">DOWNLOAD CV</ButtonLink>
-          </animated.div>
         </div>
       </Element>
 
@@ -165,7 +162,7 @@ export default function Home() {
         </div>
       </Element> */}
 
-      <Element name="about" className="py-12">
+      <Element name="about" className="py-20">
         <div className="container">
           <h2 className="my-2 text-white font-bold tracking-wider text-left leading-tight">About Me</h2>
           <div className="w-full">
@@ -193,7 +190,7 @@ export default function Home() {
         </div>
       </Element>
 
-      <Element name="contact" className="w-full py-12 bg-white">
+      <Element name="contact" className="w-full py-20 bg-white">
         <div className="container">
           <h2 className="my-2 font-bold tracking-wider text-gray-800 leading-tight text-center">Contact Me</h2>
           <div className="w-full">
@@ -221,7 +218,7 @@ export default function Home() {
         </div>
       </Element>
 
-      <div className="text-center py-2">
+      <div className="text-center py-4">
         Designed and Created by Bryan Meneses - 2021
       </div>
     </>

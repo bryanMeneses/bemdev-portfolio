@@ -17,7 +17,7 @@ import Modal from "@/components/Modal/Modal";
 
 export default function Home() {
   const [active, handleModal] = useState(false);
-  const [content, setContent] = useState(<></>);
+  const [content, setContent] = useState(false);
 
   const openModal = () => {
     document.body.style.overflow = "hidden";
@@ -27,7 +27,7 @@ export default function Home() {
   const closeModal = () => {
     document.body.style.overflow = "auto";
     handleModal(false);
-    setContent(<></>);
+    setContent(false);
   };
 
   const closeMobileNavEscKey = (e) => {
@@ -219,7 +219,7 @@ export default function Home() {
           <div className="w-full">
             <div className="h-1 w-52 ml-12 opacity-40 bg-white"></div>
           </div>
-          <Projects />
+          <Projects openModal={openModal} setContent={setContent} />
         </div>
       </Element>
 
@@ -253,9 +253,9 @@ export default function Home() {
               <p>
                 Hi! My name is Bryan Meneses and I am a web developer based in
                 the Southwest of England, originally from the USA. My journey to
-                web development was long. I used to study music, and then I
-                graduated in Accounting. By then creativity was gone in my life
-                and I felt aimless.
+                web development was different. I used to study music, and then I
+                graduated in Accounting. Creativity was gone in my life and I
+                felt aimless.
               </p>
               <p className="mt-10">
                 Web develoment reignited both the creative and logical sides of
@@ -274,6 +274,27 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-4 text-white">
+            <h5>Some technologies I have worked with recently:</h5>
+            <div className={`mt-4 max-w-4xl ${styles.tech_stack}`}>
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>Laravel</span>
+              <span>Node/Express.js</span>
+              <span>JavaScript</span>
+              <span>PHP</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>MongoDB</span>
+              <span>RESTful APIs</span>
+              <span>SCSS</span>
+              <span>TailwindCSS</span>
+              <span>Bootstrap</span>
+              <span>Shopify & Liquid</span>
+              <span>GitHub & BitBucket</span>
+              <span>3rd-party API Integrations</span>
+            </div>
+          </div>
         </div>
       </Element>
 
@@ -286,7 +307,7 @@ export default function Home() {
             <div className="h-1 w-52 mx-auto opacity-40 gradient"></div>
           </div>
           <h6 className="my-4 text-center">
-            If you are a fan of what I do, let's get in touch.
+            If you like what I do, let's get in touch.
           </h6>
           <form
             name="contactMe"

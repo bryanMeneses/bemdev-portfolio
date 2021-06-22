@@ -11,7 +11,7 @@ export const projectsData = [
     imageName: "glam-rapidlash.jpg",
     title: "Glam Rapidlash (Lifetech Resources)",
     description:
-      "GSAP scrolling animation page to advertise company's new product.",
+      "GSAP scrolling animation page to advertise a Lifetech Resources client's new product.",
     tech_stack: "",
     demo_link: "https://glam.rapidlash.com",
     code_link: "",
@@ -20,7 +20,7 @@ export const projectsData = [
     imageName: "travelpals.jpg",
     title: "TravelPals",
     description:
-      "Full-stack social media site. Customize profile picture, make and like posts.",
+      "Full-stack social media site using PHP framework Laravel. Styling with Bootstrap. Authorization, custom middleware, uploading profile pictures, make and like posts.",
     tech_stack: "",
     demo_link: "http://travelpals-bemdev.herokuapp.com",
     code_link: "https://github.com/bryanMeneses/travelpals",
@@ -29,7 +29,7 @@ export const projectsData = [
     imageName: "photix.jpg",
     title: "Photix",
     description:
-      "View photos from the Unsplash API in an infinte scrolling page.",
+      "View photos from the Unsplash API in an infinte scrolling React page. As you scroll, more photos get loaded automatically. API key and all calls to the API are handled in a custom Express.js server and hosted as a Netlify serverless function.",
     tech_stack: "",
     demo_link: "https://photix.netlify.app",
     code_link: "https://github.com/bryanMeneses/photix",

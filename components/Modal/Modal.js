@@ -35,7 +35,7 @@ const Modal = ({ closeModal, active, content }) => {
                   />
                 </button>
               </header>
-              <main>{content}</main>
+              <div>{content}</div>
               <footer></footer>
             </div>
           </motion.div>

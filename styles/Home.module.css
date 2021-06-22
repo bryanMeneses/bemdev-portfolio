@@ -28,8 +28,8 @@
   object-fit: cover;
 }
 
-.cta {
-  /* text-align: center; */
+.tech_stack span {
+  @apply bg-white text-gray-800 px-3 py-1 rounded-2xl mr-2 mb-2 inline-block text-sm;
 }
 
 @screen sm {

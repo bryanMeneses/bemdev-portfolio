@@ -3,11 +3,18 @@ import React from "react";
 import styles from "./Button.module.css";
 import { Link as ScrollLink } from "react-scroll";
 
-export const Button = ({ children, type = "button", className, btnStyle }) => {
+export const Button = ({
+  children,
+  type = "button",
+  className,
+  btnStyle,
+  ...props
+}) => {
   return (
     <button
       type={type}
       className={`${styles.btn} ${styles[btnStyle]} ${className}`}
+      {...props}
     >
       {children}
     </button>

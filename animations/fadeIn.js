@@ -1,10 +1,7 @@
-export const fadeIn = (delay = 0, duration = 550) => ({
-  opacity: 1, 
-  delay, 
-  from: {
-    opacity: 0
-  },
-  config: {
-    duration,
-  },
-})
+// Framer motion animation
+export const fadeIn = {
+  hidden: { display: "none" },
+  show: { display: "block" },
+  // hidden: { opacity: 0, zIndex: 0 },
+  // show: { opacity: 1, zIndex: 1 },
+};

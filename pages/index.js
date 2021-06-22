@@ -1,8 +1,11 @@
 import Head from "next/head";
-import { ButtonLink, Button } from "../components/Button/Button";
+import { ButtonScrollLink, Button } from "../components/Button/Button";
 import styles from "../styles/Home.module.css";
 
-import Trail from "@/components/Trail";
+import { motion } from "framer-motion";
+
+import { fadeInDown } from "@/animations/fadeInDown";
+
 import Item from "@/components/Experience/Item";
 import Projects from "@/components/Projects/Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +17,7 @@ import Modal from "@/components/Modal/Modal";
 
 export default function Home() {
   const [active, handleModal] = useState(false);
+  const [content, setContent] = useState(<></>);
 
   const openModal = () => {
     document.body.style.overflow = "hidden";
@@ -23,6 +27,7 @@ export default function Home() {
   const closeModal = () => {
     document.body.style.overflow = "auto";
     handleModal(false);
+    setContent(<></>);
   };
 
   const closeMobileNavEscKey = (e) => {
@@ -48,41 +53,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Modal
-        active={active}
-        closeModal={closeModal}
-        content={
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              paddingTop: "60%",
-              overflow: "hidden",
-            }}
-          >
-            <iframe
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-              }}
-              src="https://www.youtube.com/embed/GtgjXW8gfBE"
-              frameBorder="0"
-              width="560"
-              height="315"
-              allowFullScreen={true}
-              mozallowfullscreen="true"
-              webkitallowfullscreen="true"
-            ></iframe>
-          </div>
-        }
-      />
+      <Modal active={active} closeModal={closeModal} content={content} />
 
       <Element className={`${styles.hero}`}>
         <div className="container">
-          <Trail className="mt-4 font-bold text-white md:pr-4 md:mt-0 lg:p-0">
+          <motion.div
+            variants={fadeInDown}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 1 }}
+            className="mt-4 font-bold text-white md:pr-4 md:mt-0 lg:p-0"
+          >
             <p className="uppercase tracking-loose font-normal xl:text-xl">
               Hello, my name is
             </p>
@@ -121,14 +102,11 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-8">
-              <ButtonLink href="/" btnStyle="primary" className="mr-4">
+              <ButtonScrollLink to="projects" btnStyle="primary">
                 VIEW PROJECTS
-              </ButtonLink>
-              <ButtonLink href="/" btnStyle="secondary">
-                DOWNLOAD CV
-              </ButtonLink>
+              </ButtonScrollLink>
             </div>
-          </Trail>
+          </motion.div>
         </div>
       </Element>
 
@@ -141,8 +119,8 @@ export default function Home() {
             <div className="h-1 w-52 ml-12 opacity-40 gradient"></div>
           </div>
           <Item
-            title="Junior Developer"
-            date="February 2020 - Present"
+            title="Web Developer"
+            date="October 2019 - June 2021"
             description={
               <ul className="list-disc pl-5">
                 <li className="mb-2">
@@ -166,7 +144,39 @@ export default function Home() {
                 <li className="mb-2">
                   Created a scrolling animated product page to market a client's
                   new product line using GSAP.{" "}
-                  <button onClick={openModal} className="text-blue-600">
+                  <button
+                    onClick={() => {
+                      setContent(
+                        <div
+                          style={{
+                            position: "relative",
+                            width: "100%",
+                            paddingTop: "60%",
+                            overflow: "hidden",
+                          }}
+                        >
+                          <iframe
+                            style={{
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              width: "100%",
+                              height: "100%",
+                            }}
+                            src="https://www.youtube.com/embed/GtgjXW8gfBE"
+                            frameBorder="0"
+                            width="560"
+                            height="315"
+                            allowFullScreen={true}
+                            mozallowfullscreen="true"
+                            webkitallowfullscreen="true"
+                          ></iframe>
+                        </div>
+                      );
+                      openModal();
+                    }}
+                    className="text-blue-600"
+                  >
                     View example.
                   </button>
                 </li>
@@ -184,7 +194,7 @@ export default function Home() {
           />
           <Item
             title="Web Developer Intern"
-            date="September 2019 - January 2020"
+            date="May 2019 - October 2019"
             description={
               <ul className="list-disc pl-5">
                 <li className="mb-2">

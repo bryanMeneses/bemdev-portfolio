@@ -198,6 +198,7 @@ export default function Home() {
               <span>HTML5</span>
               <span>CSS3</span>
               <span>MongoDB</span>
+              <span>Eloquent ORM</span>
               <span>RESTful APIs</span>
               <span>Headless CMS</span>
               <span>SCSS</span>

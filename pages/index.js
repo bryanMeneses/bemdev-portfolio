@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import { fadeInDown } from "@/animations/fadeInDown";
 
-import Item from "@/components/Experience/Item";
+import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
@@ -55,7 +55,7 @@ export default function Home() {
 
       <Modal active={active} closeModal={closeModal} content={content} />
 
-      <Element className={`${styles.hero}`}>
+      <Element className={`${styles.hero} py-8`}>
         <div className="container">
           <motion.div
             variants={fadeInDown}
@@ -67,16 +67,16 @@ export default function Home() {
             <p className="uppercase tracking-loose font-normal xl:text-xl">
               Hello, my name is
             </p>
-            <h1 className="leading-tight my-2 text-5xl sm:text-6xl md:text-7xl">
+            <h1 className="leading-tight my-2 text-5xl sm:text-6xl md:text-8xl">
               Bryan Meneses
             </h1>
-            <h2 className="leading-tight mb-4 text-3xl sm:text-4xl md:text-4xl">
+            <h2 className="leading-tight mb-4 text-3xl sm:text-4xl md:text-5xl">
               I love to build things for the Web.
             </h2>
-            <h5 className="leading-normal mb-8 font-normal max-w-xl">
-              My strength is building front-end web applications that match your
-              designs to the dot.
-            </h5>
+            <p className="tracking-wide mb-8 font-normal max-w-xl">
+              I am a web developer based the Southwest of England, specializing
+              in creating beautiful and functional websites.
+            </p>
             <div className="mt-4">
               <a
                 className="h-12 w-12 mr-6 rounded-full bg-gray-800 transition-all transform hover:scale-110 inline-flex justify-center items-center hover:shadow-lg"
@@ -118,96 +118,7 @@ export default function Home() {
           <div className="w-full">
             <div className="h-1 w-52 ml-12 opacity-40 gradient"></div>
           </div>
-          <Item
-            title="Web Developer"
-            date="October 2019 - June 2021"
-            description={
-              <ul className="list-disc pl-5">
-                <li className="mb-2">
-                  Developed a full-stack portal using Next.js and Node.js to
-                  simplify work-flow for marketing team. Features creating
-                  Trello cards via the Trello API directly from portal and
-                  routes for downloading various brand assets. Backend connects
-                  to various Mongo databases used in other company sites. Uses
-                  roles/middleware to authorize relative people to access
-                  specific routes.
-                </li>
-                <li className="mb-2">
-                  Maintained and updated{" "}
-                  <a href="https://skinresearchlabs.com" target="blank">
-                    Skin Research Laboratories
-                  </a>{" "}
-                  Shopify front end to fit holidays/seasons and created custom
-                  dynamic features, during which period the store's revenue
-                  increased by 75% over the year before.
-                </li>
-                <li className="mb-2">
-                  Created a scrolling animated product page to market a client's
-                  new product line using GSAP.{" "}
-                  <button
-                    onClick={() => {
-                      setContent(
-                        <div
-                          style={{
-                            position: "relative",
-                            width: "100%",
-                            paddingTop: "60%",
-                            overflow: "hidden",
-                          }}
-                        >
-                          <iframe
-                            style={{
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                              width: "100%",
-                              height: "100%",
-                            }}
-                            src="https://www.youtube.com/embed/GtgjXW8gfBE"
-                            frameBorder="0"
-                            width="560"
-                            height="315"
-                            allowFullScreen={true}
-                            mozallowfullscreen="true"
-                            webkitallowfullscreen="true"
-                          ></iframe>
-                        </div>
-                      );
-                      openModal();
-                    }}
-                    className="text-blue-600"
-                  >
-                    View example.
-                  </button>
-                </li>
-                <li className="mb-2">
-                  Drastically improved page initial loading times for above
-                  e-commerce site by implementing image and stylesheet
-                  lazy-loading.
-                </li>
-                <li className="mb-2">
-                  Coordinated with the lead developer using Git and Bitbucket.
-                </li>
-              </ul>
-            }
-            company="Lifetech Resources"
-          />
-          <Item
-            title="Web Developer Intern"
-            date="May 2019 - October 2019"
-            description={
-              <ul className="list-disc pl-5">
-                <li className="mb-2">
-                  Collaborated with remote designers to redesign pages to
-                  improve user experience
-                </li>
-                <li className="mb-2">
-                  Coordinated with the lead developer using Git and Bitbucket.
-                </li>
-              </ul>
-            }
-            company="Win-Kel"
-          />
+          <Experience />
         </div>
       </Element>
 
@@ -223,7 +134,7 @@ export default function Home() {
         </div>
       </Element>
 
-      <Element name="education" className="w-full py-12 bg-white">
+      {/* <Element name="education" className="w-full py-12 bg-white">
         <div className="container">
           <h2 className="my-2 font-bold tracking-wider text-gray-800 text-left leading-tight">
             Education
@@ -238,7 +149,7 @@ export default function Home() {
             date="Graduated in January 2019"
           />
         </div>
-      </Element>
+      </Element> */}
 
       <Element name="about" className="py-20">
         <div className="container">
@@ -258,8 +169,8 @@ export default function Home() {
                 felt aimless.
               </p>
               <p className="mt-10">
-                Web develoment reignited both the creative and logical sides of
-                my life.
+                Thanks to the creative and logical nature of web develoment, I
+                discovered a career I could truly be passionate about.
               </p>
             </div>
 
@@ -279,6 +190,7 @@ export default function Home() {
             <div className={`mt-4 max-w-4xl ${styles.tech_stack}`}>
               <span>React.js</span>
               <span>Next.js</span>
+              <span>Redux</span>
               <span>Laravel</span>
               <span>Node/Express.js</span>
               <span>JavaScript</span>
@@ -287,12 +199,18 @@ export default function Home() {
               <span>CSS3</span>
               <span>MongoDB</span>
               <span>RESTful APIs</span>
+              <span>Headless CMS</span>
               <span>SCSS</span>
               <span>TailwindCSS</span>
               <span>Bootstrap</span>
               <span>Shopify & Liquid</span>
+              <span>Mailchimp</span>
               <span>GitHub & BitBucket</span>
               <span>3rd-party API Integrations</span>
+              <span>Trello</span>
+              <span>PSD to Code</span>
+              <span>Responsive (mobile) design</span>
+              <span>Web Scraping</span>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ function Project({
                 <h4 className="text-my-green-300 font-bold">{title}</h4>
                 <div className="mt-2 mb-4 h-1 w-52 opacity-60 mx-auto gradient"></div>
                 <img alt={title} src={`/projects/${imageName}`} />
-                <p className="text-gray-800 text-sm lg:text-base mt-3">
+                <p className="text-gray-800 text-sm lg:text-base mt-3 whitespace-pre-line">
                   {description}
                 </p>
                 <div className="mt-4">

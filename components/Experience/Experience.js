@@ -66,10 +66,12 @@ function Experience() {
             <li className="mb-2">
               Coded Mailchimp promotional emails seen by thousands of customers.
             </li>
-            <li className="mb-2">Update, refactor, and optimize old code.</li>
             <li className="mb-2">
-              Improved page loading times implementing image and page-specific
-              stylesheets.
+              Updated, refactored, and optimized old code.
+            </li>
+            <li className="mb-2">
+              Improved page loading times by implementing image and
+              page-specific stylesheets.
             </li>
             <li className="mb-2">
               Coordinated with the lead developer using Git and Bitbucket.

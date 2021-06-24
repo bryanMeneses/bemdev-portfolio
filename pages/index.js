@@ -209,7 +209,7 @@ export default function Home() {
               <span>GitHub & BitBucket</span>
               <span>3rd-party API Integrations</span>
               <span>Trello</span>
-              <span>PSD to Code</span>
+              <span>PSD to HTML</span>
               <span>Responsive (mobile) design</span>
               <span>Web Scraping</span>
             </div>

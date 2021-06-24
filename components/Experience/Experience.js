@@ -6,7 +6,7 @@ function Experience() {
     <div>
       <Item
         title="Web Developer"
-        date="October 2019 - June 2021"
+        date="September 2019 - June 2021"
         description={
           <ul className="list-disc pl-5">
             <li className="mb-2">
@@ -26,45 +26,14 @@ function Experience() {
             </li>
             <li className="mb-2">
               Created a scrolling animated product page to market a client's new
-              product line using GSAP.{" "}
-              <button
-                onClick={() => {
-                  setContent(
-                    <div
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        paddingTop: "60%",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <iframe
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          width: "100%",
-                          height: "100%",
-                        }}
-                        src="https://www.youtube.com/embed/GtgjXW8gfBE"
-                        frameBorder="0"
-                        width="560"
-                        height="315"
-                        allowFullScreen={true}
-                        mozallowfullscreen="true"
-                        webkitallowfullscreen="true"
-                      ></iframe>
-                    </div>
-                  );
-                  openModal();
-                }}
-                className="text-blue-600"
-              >
-                View example.
-              </button>
+              product line using GSAP. View at{" "}
+              <a href="https://glam.rapidlash.com" target="blank">
+                glam.rapidlash.com
+              </a>
+              .
             </li>
             <li className="mb-2">
-              Coded Mailchimp promotional emails seen by thousands of customers.
+              Coded MailChimp promotional emails seen by thousands of customers.
             </li>
             <li className="mb-2">
               Updated, refactored, and optimized old code.
@@ -82,7 +51,7 @@ function Experience() {
       />
       <Item
         title="Web Developer Intern"
-        date="May 2019 - October 2019"
+        date="April 2019 - September 2019"
         description={
           <ul className="list-disc pl-5">
             <li className="mb-2">
@@ -101,8 +70,8 @@ function Experience() {
               user experience.
             </li>
             <li className="mb-2">
-              Coordinated with lead developer and two other developers using
-              GitHub and Discord.
+              Coordinated with a team of three developers using GitHub and
+              Discord.
             </li>
           </ul>
         }

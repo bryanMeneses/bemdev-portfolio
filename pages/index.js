@@ -134,23 +134,6 @@ export default function Home() {
         </div>
       </Element>
 
-      {/* <Element name="education" className="w-full py-12 bg-white">
-        <div className="container">
-          <h2 className="my-2 font-bold tracking-wider text-gray-800 text-left leading-tight">
-            Education
-          </h2>
-          <div className="w-full">
-            <div className="h-1 w-52 ml-12 opacity-40 gradient"></div>
-          </div>
-          <Item
-            title="California State University, Fullerton"
-            company="Bachelor of Arts"
-            description={<p>Business Administration - Accounting Track</p>}
-            date="Graduated in January 2019"
-          />
-        </div>
-      </Element> */}
-
       <Element name="about" className="py-20">
         <div className="container">
           <h2 className="my-2 text-white font-bold tracking-wider text-left leading-tight">
@@ -191,27 +174,17 @@ export default function Home() {
               <span>React.js</span>
               <span>Next.js</span>
               <span>Redux</span>
-              <span>Laravel</span>
               <span>Node/Express.js</span>
               <span>JavaScript</span>
               <span>PHP</span>
               <span>HTML5</span>
               <span>CSS3</span>
               <span>MongoDB</span>
-              <span>Eloquent ORM</span>
               <span>RESTful APIs</span>
-              <span>Headless CMS</span>
               <span>SCSS</span>
               <span>TailwindCSS</span>
               <span>Bootstrap</span>
-              <span>Shopify & Liquid</span>
-              <span>Mailchimp</span>
-              <span>GitHub & BitBucket</span>
-              <span>3rd-party API Integrations</span>
-              <span>Trello</span>
-              <span>PSD to HTML</span>
               <span>Responsive (mobile) design</span>
-              <span>Web Scraping</span>
             </div>
           </div>
         </div>
